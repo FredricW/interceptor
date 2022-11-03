@@ -1,11 +1,6 @@
 import { HttpVerb } from 'http-request-mock/src/types'
 
-// import { CONFIG } from '../../../config';
-
 export const INTERCEPTOR_STORAGE_KEY = 'interceptor-endpoints'
-
-export const STORE_API = 'https://storeapi.com'
-export const CLOUD_API = 'https://cloudapi.com'
 
 export interface Intercept {
   url: string

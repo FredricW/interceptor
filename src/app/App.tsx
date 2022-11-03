@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from 'react'
+import { useEffect, useMemo } from 'react'
 
 import HttpRequestMock from 'http-request-mock'
 import { Disable } from 'http-request-mock/src/types'
