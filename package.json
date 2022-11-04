@@ -1,16 +1,17 @@
 {
-  "name": "interceptor",
+  "name": "@fredricw/interceptor",
   "description": "Integrated frontend devtool for intercepting, blocking, creating, monitoring or recording http requests in your app.",
   "repository": "https://github.com/FredricW/interceptor.git",
   "author": "Fredric Waadeland <fredric.waadeland@gmail.com>",
   "license": "MIT",
-  "private": true,
-  "version": "0.0.0",
+  "private": false,
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "publish": "yarn publish --access public"
   },
   "dependencies": {
     "http-request-mock": "^1.8.2",
