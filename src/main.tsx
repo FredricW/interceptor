@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom/client'
 import { App } from './app/App'
 import './index.css'
 
-console.log('Hello world!')
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-)
+export const render = (tagId: string = 'interceptor') =>
+  ReactDOM.createRoot(document.getElementById(tagId) as HTMLElement).render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  )

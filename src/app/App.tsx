@@ -49,7 +49,10 @@ export const App = () => {
   const mocker = useMemo(() => HttpRequestMock.setup(), [])
 
   return (
-    <div className='pointer-events-none fixed top-0 left-0 z-50 h-[90vh] w-full max-w-md p-4 pt-16'>
+    <div
+      id='interceptor'
+      className='pointer-events-none fixed top-0 left-0 z-50 h-[90vh] w-full max-w-md p-4 pt-16'
+    >
       <div
         className={`relative max-h-full w-full resize overflow-y-scroll rounded-lg bg-gradient-to-br from-gray-50 to-slate-200 shadow-2xl shadow-slate-700 transition-all ${
           isVisisble
