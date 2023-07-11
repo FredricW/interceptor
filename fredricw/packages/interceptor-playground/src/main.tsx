@@ -6,11 +6,12 @@ import App from './app/app';
 
 import { interceptor } from '@fredricw/interceptor';
 
-console.log('hello world! dsfds', interceptor());
+interceptor();
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
 root.render(
   <StrictMode>
     <App />
