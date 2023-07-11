@@ -1,3 +1,7 @@
-export function interceptor(): string {
-  return 'interceptor';
+export function interceptor() {
+  try {
+    import('./InterceptorRoot');
+  } catch (e) {
+    console.error(e);
+  }
 }
