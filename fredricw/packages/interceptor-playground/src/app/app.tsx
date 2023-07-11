@@ -5,7 +5,7 @@ import NxWelcome from './nx-welcome';
 
 export function App() {
   return (
-    <div>
+    <div className="bg-slate-600">
       <NxWelcome title="interceptor-playground" />
     </div>
   );
