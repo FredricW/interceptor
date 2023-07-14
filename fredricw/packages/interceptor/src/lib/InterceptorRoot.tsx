@@ -1,6 +1,7 @@
 import { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { InterceptorApp } from './app/App';
+import './styles.css';
 
 // create a new element on the body to render the app into
 // then give it an id of 'interceptor-root' so we can find it later
