@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@fredricw/components": ["packages/components/src/index.ts"],
       "@fredricw/interceptor": ["packages/interceptor/src/index.ts"]
     }
   },
