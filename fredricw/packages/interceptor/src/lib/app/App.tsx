@@ -4,16 +4,18 @@ import { Button, Badge } from '@fredricw/components';
 export const InterceptorApp = () => {
   const appStore = useAppStore();
   return (
-    <div className="bg-background text-foreground">
-      <h1>Interceptor App</h1>
-      <Badge variant="secondary">{appStore.page}</Badge>
+    <div className={appStore.darkMode ? 'dark' : ''}>
+      <div className="bg-background text-foreground">
+        <h1>Interceptor App</h1>
+        <Badge variant="secondary">{appStore.page}</Badge>
 
-      <Button
-        variant="default"
-        onClick={() => appStore.setIsVisible(!appStore.isVisible)}
-      >
-        {appStore.isVisible ? 'Hide' : 'Show'}
-      </Button>
+        <Button
+          variant="default"
+          onClick={() => appStore.setDarkMode(!appStore.darkMode)}
+        >
+          {appStore.darkMode ? 'Light' : 'Dark'}
+        </Button>
+      </div>
     </div>
   );
 };

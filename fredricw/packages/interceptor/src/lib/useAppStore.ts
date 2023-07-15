@@ -5,6 +5,8 @@ export enum Page {
 }
 
 export interface AppState {
+  darkMode: boolean;
+  setDarkMode: (state: boolean) => void;
   page: Page;
   isVisible: boolean;
   setPage: (page: Page) => void;
@@ -12,8 +14,12 @@ export interface AppState {
 }
 
 export const useAppStore = create<AppState>((set) => ({
+  darkMode: false,
+  setDarkMode: (darkMode) => set({ darkMode }),
+
   page: Page.Home,
-  isVisible: true,
   setPage: (page) => set({ page }),
+
+  isVisible: true,
   setIsVisible: (isVisible: boolean) => set({ isVisible }),
 }));
