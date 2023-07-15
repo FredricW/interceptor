@@ -4,6 +4,7 @@
   "license": "MIT",
   "scripts": {
     "start": "nx run interceptor-playground:serve:development",
+    "build:playground": "nx run interceptor-playground:build:production",
     "component:add": "npx shadcn-ui@latest add"
   },
   "private": true,
