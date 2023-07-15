@@ -11,6 +11,16 @@
       "options": {
         "lintFilePatterns": ["packages/components/**/*.{ts,tsx,js,jsx}"]
       }
+    },
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/components",
+        "main": "packages/components/src/index.ts",
+        "tsConfig": "packages/components/tsconfig.lib.json",
+        "assets": []
+      }
     }
   }
 }
