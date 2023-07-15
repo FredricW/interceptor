@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "nx run interceptor-playground:serve-static",
+    "start": "nx run interceptor-playground:serve:development",
     "build:playground": "nx run interceptor-playground:build:production",
+    "serve:playground": "nx run interceptor-playground:serve:production",
     "component:add": "npx shadcn-ui@latest add"
   },
   "private": true,
