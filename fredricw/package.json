@@ -5,7 +5,7 @@
   "scripts": {
     "start": "nx run interceptor-playground:serve:development",
     "build:playground": "nx run interceptor-playground:build:production",
-    "serve:playground": "nx run interceptor-playground:serve:production",
+    "serve:playground:production": "serve ./dist/apps/interceptor-playground",
     "component:add": "npx shadcn-ui@latest add"
   },
   "private": true,
@@ -21,6 +21,7 @@
     "postcss-import": "^15.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "serve": "^14.2.0",
     "tailwind-merge": "^1.13.2",
     "tailwindcss-animate": "^1.0.6",
     "tslib": "^2.3.0",
