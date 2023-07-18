@@ -13,9 +13,21 @@ export interface AppState {
   setIsVisible: (isVisible: boolean) => void;
 }
 
+const setBodyClass = (darkMode: boolean) => {
+  const darkClass = 'i-dark';
+  if (darkMode) {
+    document.body.classList.add(darkClass);
+  } else {
+    document.body.classList.remove(darkClass);
+  }
+};
+
 export const useAppStore = create<AppState>((set) => ({
   darkMode: false,
-  setDarkMode: (darkMode) => set({ darkMode }),
+  setDarkMode: (darkMode) => {
+    set({ darkMode });
+    setBodyClass(darkMode);
+  },
 
   page: Page.Home,
   setPage: (page) => set({ page }),
