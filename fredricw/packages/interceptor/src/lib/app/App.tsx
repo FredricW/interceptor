@@ -1,7 +1,6 @@
 import clsx from 'clsx';
 import { useAppStore } from '../useAppStore';
 import { Dialog, DialogContent } from '@fredricw/components';
-import { Navbar } from '../components/Navbar';
 import { InterceptorConfig } from '../InterceptorRoot';
 import { useHotkeys } from 'react-hotkeys-hook';
 import { AppRouter } from './AppRouter';
@@ -18,9 +17,7 @@ export const InterceptorApp = (props: { config?: InterceptorConfig }) => {
   return (
     <div className={clsx('font-sans')}>
       <Dialog open={appStore.isVisible} onOpenChange={appStore.setIsVisible}>
-        <DialogContent className="min-h-[400px]">
-          <Navbar />
-
+        <DialogContent>
           <AppRouter />
         </DialogContent>
       </Dialog>
