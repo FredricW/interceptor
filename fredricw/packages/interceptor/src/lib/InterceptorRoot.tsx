@@ -32,7 +32,7 @@ export const init = (config?: InterceptorConfig) => {
 
   root.render(
     <StrictMode>
-      <InterceptorApp />
+      <InterceptorApp config={config} />
     </StrictMode>
   );
 };

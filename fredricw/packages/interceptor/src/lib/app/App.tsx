@@ -1,19 +1,21 @@
 import clsx from 'clsx';
 import { useAppStore } from '../useAppStore';
-import {
-  Button,
-  Badge,
-  Dialog,
-  DialogTrigger,
-  DialogContent,
-} from '@fredricw/components';
+import { Button, Badge, Dialog, DialogContent } from '@fredricw/components';
+import { InterceptorConfig } from '../InterceptorRoot';
+import { useHotkeys } from 'react-hotkeys-hook';
 
-export const InterceptorApp = () => {
+export const InterceptorApp = (props: { config?: InterceptorConfig }) => {
   const appStore = useAppStore();
+
+  useHotkeys(
+    props.config?.hotkeys?.toggleUi ?? 'ctrl+d',
+    () => appStore.setIsVisible(!appStore.isVisible),
+    [appStore.isVisible]
+  );
+
   return (
     <div className={clsx('font-sans')}>
-      <Dialog>
-        <DialogTrigger>Open</DialogTrigger>
+      <Dialog open={appStore.isVisible} onOpenChange={appStore.setIsVisible}>
         <DialogContent>
           <h1>Interceptor App</h1>
           <Badge variant="secondary">{appStore.page}</Badge>
