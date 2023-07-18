@@ -1,8 +1,10 @@
 import clsx from 'clsx';
 import { useAppStore } from '../useAppStore';
-import { Button, Badge, Dialog, DialogContent } from '@fredricw/components';
+import { Dialog, DialogContent } from '@fredricw/components';
+import { Navbar } from '../components/Navbar';
 import { InterceptorConfig } from '../InterceptorRoot';
 import { useHotkeys } from 'react-hotkeys-hook';
+import { AppRouter } from './AppRouter';
 
 export const InterceptorApp = (props: { config?: InterceptorConfig }) => {
   const appStore = useAppStore();
@@ -16,16 +18,10 @@ export const InterceptorApp = (props: { config?: InterceptorConfig }) => {
   return (
     <div className={clsx('font-sans')}>
       <Dialog open={appStore.isVisible} onOpenChange={appStore.setIsVisible}>
-        <DialogContent>
-          <h1>Interceptor App</h1>
-          <Badge variant="secondary">{appStore.page}</Badge>
+        <DialogContent className="min-h-[400px]">
+          <Navbar />
 
-          <Button
-            variant="default"
-            onClick={() => appStore.setDarkMode(!appStore.darkMode)}
-          >
-            {appStore.darkMode ? 'Light' : 'Dark'}
-          </Button>
+          <AppRouter />
         </DialogContent>
       </Dialog>
     </div>

@@ -2,6 +2,7 @@ import { create } from 'zustand';
 
 export enum Page {
   Home = 'home',
+  Settings = 'settings',
 }
 
 export interface AppState {
