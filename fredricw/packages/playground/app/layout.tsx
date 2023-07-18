@@ -1,3 +1,5 @@
+import { Interceptor } from '../components/Interceptor';
+
 import './global.css';
 
 export const metadata = {
@@ -12,7 +14,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="font-sans">{children}</body>
+      <Interceptor />
     </html>
   );
 }

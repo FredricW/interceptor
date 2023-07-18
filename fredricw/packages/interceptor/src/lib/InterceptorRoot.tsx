@@ -1,3 +1,5 @@
+'use client';
+
 import { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { InterceptorApp } from './app/App';
@@ -18,6 +20,8 @@ export const init = (config?: InterceptorConfig) => {
   } else {
     console.debug('[Interceptor]: No config provided');
   }
+
+  sessionStorage.setItem('interceptor', 'true');
 
   // create a new element on the body to render the app into
   // then give it an id of 'interceptor-root' so we can find it later
